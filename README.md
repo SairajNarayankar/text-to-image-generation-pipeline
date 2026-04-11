@@ -22,8 +22,6 @@
 
 ## 🖼️ Sample Outputs
 
-## 🖼️ Sample Outputs
-
 | Photorealistic | Cyberpunk | Fantasy |
 |:---:|:---:|:---:|
 | <img src="https://image.pollinations.ai/prompt/Highly%20detailed%20photorealistic%20majestic%20lion%20at%20sunset,%204k,%20wildlife%20photography?width=400&height=400&nologo=true" width="250" alt="Photorealistic"/> | <img src="https://image.pollinations.ai/prompt/Neon-lit%20cyberpunk%20street%20at%20night,%20rain,%20reflections,%20futuristic%20cityscape?width=400&height=400&nologo=true" width="250" alt="Cyberpunk"/> | <img src="https://image.pollinations.ai/prompt/Magical%20enchanted%20forest,%20glowing%20mushrooms,%20mystical%20atmosphere,%20fantasy%20concept%20art?width=400&height=400&nologo=true" width="250" alt="Fantasy"/> |
@@ -36,7 +34,7 @@
 
 **Style Comparison (Same Prompt, Different Styles)**
 <br>
-<img src="https://image.pollinations.ai/prompt/Split%20screen%20showing%20a%20cat%20in%20four%20different%20art%20styles:%20photorealistic,%20cyberpunk,%20anime,%20and%20oil%20painting?width=400&height=400&nologo=true" width="250" alt="Style Comparison"/>
+<img src="https://image.pollinations.ai/prompt/Split%20screen%20showing%20a%20cat%20in%20four%20different%20art%20styles:%20photorealistic,%20cyberpunk,%20anime,%20and%20oil%20painting?width=400&height=500&nologo=true" width="500" alt="Style Comparison"/>
 
 ---
 
