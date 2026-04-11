@@ -5,7 +5,7 @@
 ### Production-Grade Generative AI System Using Stable Diffusion
 
 [![Live Demo](https://img.shields.io/badge/🤗_Live_Demo-Hugging_Face-yellow?style=for-the-badge)](https://huggingface.co/spaces/Sairaj69/text-to-image-generator)
-[![Open In Colab](https://img.shields.io/badge/Open_In-Colab-F9AB00?style=for-the-badge&logo=google-colab)]((https://colab.research.google.com/drive/1QODiw5mcHV25hCY0Hn60QhwfAiUzswF7))
+[![Open In Colab](https://img.shields.io/badge/Open_In-Colab-F9AB00?style=for-the-badge&logo=google-colab)](https://colab.research.google.com/drive/1QODiw5mcHV25hCY0Hn60QhwfAiUzswF7)
 [![GitHub](https://img.shields.io/badge/Source-GitHub-181717?style=for-the-badge&logo=github)](https://github.com/SairajNarayankar/text-to-image-generation-pipeline)
 
 [![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
