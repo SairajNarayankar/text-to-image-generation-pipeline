@@ -124,3 +124,138 @@ pip install -r requirements.txt
 
 # Generate
 python -m app.main generate "A sunset over mountains" --style photorealistic --seed 42
+
+╔════════════════════════════════════════════════════════════════════╗
+║                       APPLICATION LAYER                            ║
+║  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐  ┌──────────┐  ║
+║  │   Gradio    │  │  FastAPI    │  │     CLI     │  │  Batch   │  ║
+║  │   Web UI    │  │    API      │  │   (Click)   │  │  Engine  │  ║
+║  └──────┬──────┘  └──────┬──────┘  └──────┬──────┘  └────┬─────┘  ║
+╠═════════╧═════════════════╧═════════════════╧═════════════╧════════╣
+║                        CORE PIPELINE                                ║
+║               ┌─────────────────────────────────┐                   ║
+║               │  TextToImagePipeline            │                   ║
+║               │  (Orchestration & Execution)    │                   ║
+║               └──────┬──────────┬──────────┬────┘                   ║
+╠══════════════════════╧══════════╧══════════╧════════════════════════╣
+║                      COMPONENT LAYER                                ║
+║  ┌──────────────────┐  ┌──────────────────┐  ┌────────────────┐   ║
+║  │   Model Loader   │  │  Prompt Engineer │  │  Scheduler Mgr │   ║
+║  ├──────────────────┤  ├──────────────────┤  ├────────────────┤   ║
+║  │ • 6 models       │  │ • 14 styles      │  │ • 14 schedulers│   ║
+║  │ • optimization   │  │ • analysis tools │  │ • recommend    │   ║
+║  └──────────────────┘  └──────────────────┘  └────────────────┘   ║
+║                                                                      ║
+║  ┌──────────────────┐  ┌──────────────────┐  ┌────────────────┐   ║
+║  │ Latent Processor │  │ Image Processor  │  │   Utilities    │   ║
+║  ├──────────────────┤  ├──────────────────┤  ├────────────────┤   ║
+║  │ • SLERP          │  │ • enhance        │  │ • config       │   ║
+║  │ • interpolation  │  │ • watermark      │  │ • logging      │   ║
+║  │                  │  │ • grid/export    │  │ • device mgmt  │   ║
+║  └──────────────────┘  └──────────────────┘  └────────────────┘   ║
+╠═══════��══════════════════════════════════════════════════════════════╣
+║                      FOUNDATION LAYER                               ║
+║  ┌──────────────────┐  ┌──────────────────┐  ┌────────────────┐   ║
+║  │    Diffusers     │  │  Transformers    │  │    PyTorch     │   ║
+║  │   (Stable Diff)  │  │  (CLIP / T5)     │  │ (CUDA / MPS)   │   ║
+║  └──────────────────┘  └──────────────────┘  └────────────────┘   ║
+╚════════════════════════════════════════════════════════════════════��═╝
+
+text-to-image-generation-pipeline/
+├── src/                        # Core library
+│   ├── pipeline.py             # Main orchestrator
+│   ├── model_loader.py         # Model management (6 models)
+│   ├── prompt_engineer.py      # Prompt optimization (14 styles)
+│   ├── scheduler_manager.py    # Scheduler control (14 schedulers)
+│   ├── latent_manager.py       # Latent space operations
+│   ├── image_processor.py      # Post-processing pipeline
+│   └── utils.py                # Shared utilities
+├── app/                        # Application interfaces
+│   ├── main.py                 # CLI entry point
+│   ├── gradio_app.py           # Web UI
+│   ├── api.py                  # REST API
+│   ├── portfolio_generator.py  # Portfolio collections
+│   └── batch_generator.py      # Batch processing
+├── configs/                    # YAML configurations
+├── templates/                  # Generation templates (JSON)
+├── scripts/                    # Utility scripts
+├── tests/                      # Test suite
+├── notebooks/                  # Jupyter notebooks
+├── docs/                       # Documentation
+├── showcase/                   # Sample outputs
+└── output/                     # Generated images
+
+🔧 Usage
+CLI Commands
+python -m app.main generate "prompt" --style photorealistic --seed 42
+python -m app.main variations "prompt" --num 4
+python -m app.main compare-styles "prompt"
+python -m app.main compare-quality "prompt" --steps-list "10,20,30,50"
+python -m app.main portfolio --seed 42
+python -m app.main batch templates/marketing_templates.json
+python -m app.main analyze "your prompt"
+python -m app.main webui --port 7860
+python -m app.main api --port 8000
+
+
+Python API
+python
+from src.pipeline import TextToImagePipeline
+
+pipeline = TextToImagePipeline.from_config("config.yaml")
+pipeline.setup()
+
+result = pipeline.generate(
+    prompt="A majestic castle at sunset",
+    style="fantasy",
+    quality="ultra",
+    seed=42,
+)
+result["images"][0].show()
+
+
+REST API
+bash
+curl -X POST http://localhost:8000/generate \
+  -H "Content-Type: application/json" \
+  -d '{"prompt": "A sunset", "style": "photorealistic", "seed": 42}'
+
+
+📊 Supported Models
+Model	Resolution	VRAM	Quality
+DreamShaper 8	512px	4 GB	⭐⭐⭐⭐⭐
+Stable Diffusion 1.5	512px	4 GB	⭐⭐⭐⭐
+Stable Diffusion 2.1	768px	5 GB	⭐⭐⭐⭐
+SDXL	1024px	8 GB	⭐⭐⭐⭐⭐
+SDXL Turbo	512px	6 GB	⭐⭐⭐⭐
+Realistic Vision 5.1	512px	4 GB	⭐⭐⭐⭐⭐
+
+
+🧪 Testing
+
+pytest tests/ -v
+pytest tests/ --cov=src --cov-report=html
+
+
+🤝 Contributing
+Fork the repository
+Create feature branch: git checkout -b feature/new-feature
+Commit: git commit -m "Add new feature"
+Push: git push origin feature/new-feature
+Open Pull Request
+
+
+📄 License
+MIT License — see LICENSE for details.
+
+
+🙏 Acknowledgments
+Hugging Face Diffusers
+Stability AI — Stable Diffusion
+Lykon — DreamShaper model
+Gradio — Web UI framework
+FastAPI — REST API framework
+
+
+⭐ Star this repo if you found it helpful!
+Built with ❤️ for the Generative AI community
