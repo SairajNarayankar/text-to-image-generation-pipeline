@@ -22,19 +22,21 @@
 
 ## 🖼️ Sample Outputs
 
+## 🖼️ Sample Outputs
+
 | Photorealistic | Cyberpunk | Fantasy |
-|:-:|:-:|:-:|
-| ![Photorealistic](showcase/photorealistic_sample.png) | ![Cyberpunk](showcase/cyberpunk_sample.png) | ![Fantasy](showcase/fantasy_sample.png) |
+|:---:|:---:|:---:|
+| <img src="https://image.pollinations.ai/prompt/Highly%20detailed%20photorealistic%20majestic%20lion%20at%20sunset,%204k,%20wildlife%20photography?width=400&height=400&nologo=true" width="250" alt="Photorealistic"/> | <img src="https://image.pollinations.ai/prompt/Neon-lit%20cyberpunk%20street%20at%20night,%20rain,%20reflections,%20futuristic%20cityscape?width=400&height=400&nologo=true" width="250" alt="Cyberpunk"/> | <img src="https://image.pollinations.ai/prompt/Magical%20enchanted%20forest,%20glowing%20mushrooms,%20mystical%20atmosphere,%20fantasy%20concept%20art?width=400&height=400&nologo=true" width="250" alt="Fantasy"/> |
 | *Majestic lion at sunset* | *Neon-lit cyberpunk street* | *Enchanted forest* |
 
 | Anime | Oil Painting | 3D Render |
-|:-:|:-:|:-:|
-| ![Anime](showcase/anime_sample.png) | ![Oil Painting](showcase/oil_painting_sample.png) | ![3D Render](showcase/3d_render_sample.png) |
+|:---:|:---:|:---:|
+| <img src="https://image.pollinations.ai/prompt/Studio%20Ghibli%20style%20anime%20landscape,%20beautiful%20clouds,%20scenic?width=400&height=400&nologo=true" width="250" alt="Anime"/> | <img src="https://image.pollinations.ai/prompt/Classical%20oil%20painting%20of%20a%20beautiful%20European%20landscape,%20brushstrokes,%20museum%20quality?width=400&height=400&nologo=true" width="250" alt="Oil Painting"/> | <img src="https://image.pollinations.ai/prompt/Isometric%203D%20render%20of%20a%20cozy%20room,%20octane%20render,%20unreal%20engine%205,%20soft%20lighting?width=400&height=400&nologo=true" width="250" alt="3D Render"/> |
 | *Studio quality anime* | *Classical oil painting* | *Octane rendered scene* |
 
 **Style Comparison (Same Prompt, Different Styles)**
-
-![Style Comparison](showcase/style_comparison.png)
+<br>
+<img src="https://image.pollinations.ai/prompt/Split%20screen%20showing%20a%20cat%20in%20four%20different%20art%20styles:%20photorealistic,%20cyberpunk,%20anime,%20and%20oil%20painting?width=800&height=250&nologo=true" width="800" alt="Style Comparison"/>
 
 ---
 
