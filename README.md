@@ -1,8 +1,8 @@
-<div align="center">
-
 # 🎨 Text-to-Image Generation Pipeline
 
 ### Production-Grade Generative AI System Using Stable Diffusion
+
+<div align="center">
 
 [![Live Demo](https://img.shields.io/badge/🤗_Live_Demo-Hugging_Face-yellow?style=for-the-badge)](https://huggingface.co/spaces/Sairaj69/text-to-image-generator)
 [![Open In Colab](https://img.shields.io/badge/Open_In-Colab-F9AB00?style=for-the-badge&logo=google-colab)](https://colab.research.google.com/drive/1QODiw5mcHV25hCY0Hn60QhwfAiUzswF7)
@@ -14,18 +14,13 @@
 [![Stable Diffusion](https://img.shields.io/badge/Stable_Diffusion-v1.5-purple?style=flat-square)](https://stability.ai)
 [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 
-<p align="center">
-  <b>Engineered a complete generative AI pipeline with 14 style presets, advanced prompt engineering,<br>
-  latent space operations, and production-ready deployment across CLI, Web UI, and REST API.</b>
-</p>
+**Engineered a complete generative AI pipeline with 14 style presets, advanced prompt engineering, latent space operations, and production-ready deployment across CLI, Web UI, and REST API.**
 
 </div>
 
 ---
 
 ## 🖼️ Sample Outputs
-
-<div align="center">
 
 | Photorealistic | Cyberpunk | Fantasy |
 |:-:|:-:|:-:|
@@ -37,13 +32,9 @@
 | ![Anime](showcase/anime_sample.png) | ![Oil Painting](showcase/oil_painting_sample.png) | ![3D Render](showcase/3d_render_sample.png) |
 | *Studio quality anime* | *Classical oil painting* | *Octane rendered scene* |
 
-### Style Comparison (Same Prompt, Different Styles)
+**Style Comparison (Same Prompt, Different Styles)**
+
 ![Style Comparison](showcase/style_comparison.png)
-
-### Marketing Portfolio
-![Marketing](showcase/marketing_grid.png)
-
-</div>
 
 ---
 
@@ -111,20 +102,28 @@
 ### Local Installation
 
 ```bash
-# Clone
+# Clone repository
 git clone https://github.com/YOUR_USERNAME/text-to-image-generation-pipeline.git
 cd text-to-image-generation-pipeline
 
-# Setup
-python -m venv venv && source venv/bin/activate  # Linux/Mac
-# OR: python -m venv venv && venv\Scripts\activate  # Windows
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+# OR
+venv\Scripts\activate  # Windows
 
-# Install
+# Install dependencies
 pip install -r requirements.txt
 
-# Generate
+# Generate image
 python -m app.main generate "A sunset over mountains" --style photorealistic --seed 42
+```
 
+---
+
+## 🏗️ Architecture
+
+```
 ╔════════════════════════════════════════════════════════════════════╗
 ║                       APPLICATION LAYER                            ║
 ║  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐  ┌──────────┐  ║
@@ -153,14 +152,18 @@ python -m app.main generate "A sunset over mountains" --style photorealistic --s
 ║  │ • interpolation  │  │ • watermark      │  │ • logging      │   ║
 ║  │                  │  │ • grid/export    │  │ • device mgmt  │   ║
 ║  └──────────────────┘  └──────────────────┘  └────────────────┘   ║
-╠═══════��══════════════════════════════════════════════════════════════╣
+╠══════════════════════════════════════════════════════════════════════╣
 ║                      FOUNDATION LAYER                               ║
 ║  ┌──────────────────┐  ┌──────────────────┐  ┌────────────────┐   ║
 ║  │    Diffusers     │  │  Transformers    │  │    PyTorch     │   ║
 ║  │   (Stable Diff)  │  │  (CLIP / T5)     │  │ (CUDA / MPS)   │   ║
 ║  └──────────────────┘  └──────────────────┘  └────────────────┘   ║
-╚════════════════════════════════════════════════════════════════════��═╝
+╚════════════════════════════════════════════════════════════════════╝
+```
 
+### Directory Structure
+
+```
 text-to-image-generation-pipeline/
 ├── src/                        # Core library
 │   ├── pipeline.py             # Main orchestrator
@@ -184,22 +187,46 @@ text-to-image-generation-pipeline/
 ├── docs/                       # Documentation
 ├── showcase/                   # Sample outputs
 └── output/                     # Generated images
+```
 
-🔧 Usage
-CLI Commands
+---
+
+## 🔧 Usage
+
+### CLI Commands
+
+```bash
+# Basic generation
 python -m app.main generate "prompt" --style photorealistic --seed 42
+
+# Style variations
 python -m app.main variations "prompt" --num 4
+
+# Compare styles
 python -m app.main compare-styles "prompt"
+
+# Compare quality levels
 python -m app.main compare-quality "prompt" --steps-list "10,20,30,50"
+
+# Portfolio generation
 python -m app.main portfolio --seed 42
+
+# Batch processing
 python -m app.main batch templates/marketing_templates.json
+
+# Analyze prompt
 python -m app.main analyze "your prompt"
+
+# Launch Web UI
 python -m app.main webui --port 7860
+
+# Start REST API
 python -m app.main api --port 8000
+```
 
+### Python API
 
-Python API
-python
+```python
 from src.pipeline import TextToImagePipeline
 
 pipeline = TextToImagePipeline.from_config("config.yaml")
@@ -212,50 +239,74 @@ result = pipeline.generate(
     seed=42,
 )
 result["images"][0].show()
+```
 
+### REST API
 
-REST API
-bash
+```bash
 curl -X POST http://localhost:8000/generate \
   -H "Content-Type: application/json" \
-  -d '{"prompt": "A sunset", "style": "photorealistic", "seed": 42}'
+  -d '{
+    "prompt": "A sunset",
+    "style": "photorealistic",
+    "seed": 42
+  }'
+```
 
+---
 
-📊 Supported Models
-Model	Resolution	VRAM	Quality
-DreamShaper 8	512px	4 GB	⭐⭐⭐⭐⭐
-Stable Diffusion 1.5	512px	4 GB	⭐⭐⭐⭐
-Stable Diffusion 2.1	768px	5 GB	⭐⭐⭐⭐
-SDXL	1024px	8 GB	⭐⭐⭐⭐⭐
-SDXL Turbo	512px	6 GB	⭐⭐⭐⭐
-Realistic Vision 5.1	512px	4 GB	⭐⭐⭐⭐⭐
+## 📊 Supported Models
 
+| Model | Resolution | VRAM | Quality |
+|-------|-----------|------|---------|
+| DreamShaper 8 | 512px | 4 GB | ⭐⭐⭐⭐⭐ |
+| Stable Diffusion 1.5 | 512px | 4 GB | ⭐⭐⭐⭐ |
+| Stable Diffusion 2.1 | 768px | 5 GB | ⭐⭐⭐⭐ |
+| SDXL | 1024px | 8 GB | ⭐⭐⭐⭐⭐ |
+| SDXL Turbo | 512px | 6 GB | ⭐⭐⭐⭐ |
+| Realistic Vision 5.1 | 512px | 4 GB | ⭐⭐⭐⭐⭐ |
 
-🧪 Testing
+---
 
+## 🧪 Testing
+
+```bash
 pytest tests/ -v
 pytest tests/ --cov=src --cov-report=html
+```
 
+---
 
-🤝 Contributing
-Fork the repository
-Create feature branch: git checkout -b feature/new-feature
-Commit: git commit -m "Add new feature"
-Push: git push origin feature/new-feature
-Open Pull Request
+## 🤝 Contributing
 
+1. Fork the repository
+2. Create feature branch: `git checkout -b feature/new-feature`
+3. Commit changes: `git commit -m "Add new feature"`
+4. Push to branch: `git push origin feature/new-feature`
+5. Open a Pull Request
 
-📄 License
-MIT License — see LICENSE for details.
+---
 
+## 📄 License
 
-🙏 Acknowledgments
-Hugging Face Diffusers
-Stability AI — Stable Diffusion
-Lykon — DreamShaper model
-Gradio — Web UI framework
-FastAPI — REST API framework
+MIT License — see [LICENSE](LICENSE) for details.
 
+---
 
-⭐ Star this repo if you found it helpful!
+## 🙏 Acknowledgments
+
+- [Hugging Face Diffusers](https://huggingface.co/docs/diffusers)
+- [Stability AI](https://stability.ai) — Stable Diffusion
+- [Lykon](https://huggingface.co/Lykon) — DreamShaper model
+- [Gradio](https://gradio.app) — Web UI framework
+- [FastAPI](https://fastapi.tiangolo.com) — REST API framework
+
+---
+
+<div align="center">
+
+⭐ **Star this repo if you found it helpful!**
+
 Built with ❤️ for the Generative AI community
+
+</div>
