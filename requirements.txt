@@ -1,0 +1,38 @@
+# Core (Required)
+torch>=2.0.0
+torchvision>=0.15.0
+diffusers>=0.25.0
+transformers>=4.36.0
+accelerate>=0.25.0
+safetensors>=0.4.0
+
+# Image Processing (Required)
+Pillow>=10.0.0
+
+# Configuration (Required)
+pyyaml>=6.0.1
+python-dotenv>=1.0.0
+pydantic>=2.5.0
+
+# CLI (Required)
+click>=8.1.0
+
+# Logging & Display (Required)
+rich>=13.7.0
+tqdm>=4.66.0
+loguru>=0.7.0
+
+# Data (Required)
+numpy>=1.24.0
+matplotlib>=3.8.0
+
+# Web UI (Optional - remove if not needed)
+gradio>=4.0.0
+
+# API (Optional - remove if not needed)
+fastapi>=0.104.0
+uvicorn>=0.24.0
+python-multipart>=0.0.6
+
+# Testing (Optional - remove if not needed)
+pytest>=7.4.0

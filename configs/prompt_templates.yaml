@@ -1,0 +1,88 @@
+# ============================================
+# PROMPT TEMPLATES FOR DIFFERENT USE CASES
+# ============================================
+
+marketing:
+  product_shot:
+    template: "{product} product photography, studio lighting, {background} background, commercial quality, professional photography"
+    defaults:
+      background: "white"
+    style: "photorealistic"
+    negative: "low quality, blurry, watermark, text"
+
+  social_media:
+    template: "Eye-catching {product} advertisement, {mood} mood, {color_scheme} color scheme, social media post, modern design"
+    defaults:
+      mood: "vibrant"
+      color_scheme: "warm"
+    style: "digital_art"
+
+  banner:
+    template: "Professional web banner for {brand}, {style_desc}, clean layout, {dimensions} aspect ratio, corporate design"
+    defaults:
+      style_desc: "modern and elegant"
+      dimensions: "wide"
+    style: "minimalist"
+
+  email_header:
+    template: "{theme} themed email header image, {season} vibes, professional, clean design, wide format"
+    defaults:
+      season: "modern"
+    style: "digital_art"
+
+creative_design:
+  book_cover:
+    template: "{genre} book cover illustration, {scene}, dramatic lighting, {art_style}, high detail, publishing quality"
+    defaults:
+      art_style: "digital painting"
+    style: "digital_art"
+
+  concept_art:
+    template: "Concept art of {subject}, {environment}, {lighting} lighting, {art_style}, artstation quality"
+    defaults:
+      lighting: "cinematic"
+      art_style: "detailed digital art"
+    style: "digital_art"
+
+  poster:
+    template: "{event_type} poster design, featuring {subject}, {style_desc}, eye-catching typography space, print quality"
+    defaults:
+      style_desc: "bold and modern"
+    style: "digital_art"
+
+  wall_art:
+    template: "{art_style} wall art, {subject}, {color_palette} palette, {size} format, gallery quality, home decor"
+    defaults:
+      color_palette: "harmonious"
+      size: "large"
+    style: "digital_art"
+
+prototyping:
+  ui_mockup:
+    template: "UI design mockup for {app_type} application, {design_system} design system, clean interface, {platform} platform"
+    defaults:
+      design_system: "Material Design"
+      platform: "mobile"
+    style: "minimalist"
+
+  architecture:
+    template: "Architectural visualization of {building_type}, {style_desc}, {view} view, photorealistic render, {time_of_day}"
+    defaults:
+      style_desc: "modern minimalist"
+      view: "exterior"
+      time_of_day: "golden hour"
+    style: "photorealistic"
+
+  fashion:
+    template: "Fashion design of {garment_type}, {style_desc} style, {fabric} fabric, runway quality, full body view"
+    defaults:
+      style_desc: "contemporary"
+      fabric: "premium"
+    style: "digital_art"
+
+  industrial:
+    template: "Industrial design concept of {product_type}, {material} material, {style_desc}, product visualization, studio render"
+    defaults:
+      material: "brushed metal"
+      style_desc: "futuristic minimal"
+    style: "3d_render"

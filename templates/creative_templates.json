@@ -1,0 +1,59 @@
+{
+    "collection_name": "creative_design",
+    "description": "Creative and artistic design templates",
+    "default_settings": {
+        "quality": "ultra",
+        "num_inference_steps": 40,
+        "guidance_scale": 8.5
+    },
+    "items": [
+        {
+            "prompt": "Epic fantasy book cover, enormous dragon perched on ancient castle tower, lightning storm, dramatic clouds, epic scale",
+            "filename": "fantasy_book_cover",
+            "style": "fantasy",
+            "seed": 100,
+            "width": 512,
+            "height": 768
+        },
+        {
+            "prompt": "Vintage travel poster for Kyoto Japan, traditional temple, cherry blossoms, Mount Fuji background, retro illustration style",
+            "filename": "kyoto_travel_poster",
+            "style": "vintage",
+            "seed": 111,
+            "width": 512,
+            "height": 768
+        },
+        {
+            "prompt": "Abstract geometric modern wall art, bold complementary colors, overlapping shapes, museum gallery quality, large format canvas",
+            "filename": "abstract_wall_art",
+            "style": "minimalist",
+            "seed": 122,
+            "width": 512,
+            "height": 512
+        },
+        {
+            "prompt": "Cyberpunk alley at night, neon signs in multiple languages, rain puddles reflecting lights, mysterious figure with umbrella",
+            "filename": "cyberpunk_alley",
+            "style": "cyberpunk",
+            "seed": 133,
+            "width": 512,
+            "height": 768
+        },
+        {
+            "prompt": "Enchanted forest watercolor painting, magical creatures hiding among ancient trees, soft dappled sunlight, dreamy atmosphere",
+            "filename": "enchanted_forest",
+            "style": "watercolor",
+            "seed": 144,
+            "width": 512,
+            "height": 512
+        },
+        {
+            "prompt": "Isometric miniature city diorama, colorful buildings, tiny people, parks and roads, tilt-shift photography style, detailed",
+            "filename": "isometric_city",
+            "style": "isometric",
+            "seed": 155,
+            "width": 512,
+            "height": 512
+        }
+    ]
+}

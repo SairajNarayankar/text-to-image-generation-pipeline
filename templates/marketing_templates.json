@@ -1,0 +1,59 @@
+{
+    "collection_name": "marketing_assets",
+    "description": "Marketing and advertising asset templates",
+    "default_settings": {
+        "quality": "high",
+        "num_inference_steps": 35,
+        "guidance_scale": 8.0
+    },
+    "items": [
+        {
+            "prompt": "Professional product photography of wireless earbuds, studio lighting, white seamless background, commercial quality, centered composition",
+            "filename": "earbuds_product_shot",
+            "style": "photorealistic",
+            "seed": 42,
+            "width": 512,
+            "height": 512
+        },
+        {
+            "prompt": "Artisan coffee brand advertisement, steaming latte art, warm cozy cafe atmosphere, morning golden light, lifestyle photography",
+            "filename": "coffee_lifestyle",
+            "style": "photorealistic",
+            "seed": 101,
+            "width": 512,
+            "height": 512
+        },
+        {
+            "prompt": "Tech startup hero banner, abstract flowing data streams, blue and purple gradient, futuristic, clean modern design",
+            "filename": "tech_hero_banner",
+            "style": "digital_art",
+            "seed": 202,
+            "width": 768,
+            "height": 384
+        },
+        {
+            "prompt": "Luxury perfume bottle product shot, elegant dark background, dramatic rim lighting, reflective surface, high-end advertising",
+            "filename": "perfume_luxury",
+            "style": "cinematic",
+            "seed": 303,
+            "width": 512,
+            "height": 768
+        },
+        {
+            "prompt": "Fresh organic food delivery flatlay, colorful vegetables and fruits, top-down view, white marble surface, healthy lifestyle",
+            "filename": "food_flatlay",
+            "style": "photorealistic",
+            "seed": 404,
+            "width": 512,
+            "height": 512
+        },
+        {
+            "prompt": "Fitness app promotional image, athletic person exercising outdoors, dynamic pose, vibrant energy, motivational",
+            "filename": "fitness_promo",
+            "style": "photorealistic",
+            "seed": 505,
+            "width": 768,
+            "height": 512
+        }
+    ]
+}

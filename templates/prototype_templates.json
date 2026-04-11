@@ -1,0 +1,59 @@
+{
+    "collection_name": "rapid_prototyping",
+    "description": "Rapid prototyping and concept design templates",
+    "default_settings": {
+        "quality": "high",
+        "num_inference_steps": 30,
+        "guidance_scale": 7.5
+    },
+    "items": [
+        {
+            "prompt": "Modern mobile banking app UI mockup, clean minimal interface, card management dashboard, iOS design, professional",
+            "filename": "banking_app_ui",
+            "style": "minimalist",
+            "seed": 200,
+            "width": 512,
+            "height": 768
+        },
+        {
+            "prompt": "Sustainable eco-friendly modern house, green roof garden, solar panels, floor-to-ceiling windows, wooden accents, golden hour",
+            "filename": "eco_house_exterior",
+            "style": "photorealistic",
+            "seed": 211,
+            "width": 768,
+            "height": 512
+        },
+        {
+            "prompt": "Futuristic electric motorcycle concept, sleek carbon fiber body, LED light strip, studio product shot, dark background",
+            "filename": "ev_motorcycle_concept",
+            "style": "3d_render",
+            "seed": 222,
+            "width": 768,
+            "height": 512
+        },
+        {
+            "prompt": "Modern coworking space interior, industrial chic design, exposed brick, hanging plants, natural wood furniture, warm lighting",
+            "filename": "coworking_interior",
+            "style": "photorealistic",
+            "seed": 233,
+            "width": 768,
+            "height": 512
+        },
+        {
+            "prompt": "Minimalist desk lamp product design, bent metal arm, warm LED glow, Scandinavian aesthetic, white background studio shot",
+            "filename": "desk_lamp_design",
+            "style": "3d_render",
+            "seed": 244,
+            "width": 512,
+            "height": 512
+        },
+        {
+            "prompt": "Urban rooftop garden design concept, raised planting beds, seating areas, city skyline backdrop, evening atmosphere",
+            "filename": "rooftop_garden",
+            "style": "photorealistic",
+            "seed": 255,
+            "width": 768,
+            "height": 512
+        }
+    ]
+}

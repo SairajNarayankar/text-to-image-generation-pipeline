@@ -1,0 +1,87 @@
+# ============================================
+# STYLE PRESETS CONFIGURATION
+# ============================================
+
+styles:
+  photorealistic:
+    positive: "photorealistic, ultra realistic, DSLR quality, 8k UHD, sharp focus, high detail, natural lighting"
+    negative: "cartoon, illustration, painting, drawing, anime, CGI, 3d render"
+    guidance_scale: 8.0
+    steps: 35
+
+  digital_art:
+    positive: "digital art, trending on artstation, highly detailed, vibrant colors, professional digital painting"
+    negative: "photo, photograph, realistic, blurry, low quality"
+    guidance_scale: 7.5
+    steps: 30
+
+  oil_painting:
+    positive: "oil painting on canvas, masterpiece, classical art style, rich colors, visible brush strokes, museum quality"
+    negative: "digital, photo, modern, minimalist, cartoon"
+    guidance_scale: 8.0
+    steps: 40
+
+  watercolor:
+    positive: "watercolor painting, soft edges, flowing colors, paper texture, artistic, delicate, translucent"
+    negative: "digital, photo, sharp edges, bold lines, oil painting"
+    guidance_scale: 7.0
+    steps: 30
+
+  anime:
+    positive: "anime style, studio ghibli inspired, vibrant colors, detailed, manga art, cel shading"
+    negative: "realistic, photo, western art, oil painting, 3d"
+    guidance_scale: 7.5
+    steps: 28
+
+  minimalist:
+    positive: "minimalist design, clean lines, simple composition, modern, elegant, white space, flat design"
+    negative: "complex, cluttered, ornate, baroque, detailed texture"
+    guidance_scale: 7.0
+    steps: 25
+
+  cyberpunk:
+    positive: "cyberpunk style, neon lights, futuristic, dark atmosphere, rain, holographic, blade runner inspired"
+    negative: "natural, bright, sunny, pastoral, vintage, rustic"
+    guidance_scale: 8.5
+    steps: 35
+
+  vintage:
+    positive: "vintage style, retro, aged paper, sepia tones, nostalgic, 1950s aesthetic, film grain"
+    negative: "modern, digital, neon, futuristic, clean"
+    guidance_scale: 7.5
+    steps: 30
+
+  3d_render:
+    positive: "3D render, octane render, unreal engine 5, ray tracing, volumetric lighting, subsurface scattering, PBR materials"
+    negative: "2d, flat, painting, drawing, sketch, cartoon"
+    guidance_scale: 8.0
+    steps: 35
+
+  sketch:
+    positive: "pencil sketch, hand drawn, graphite, detailed linework, cross hatching, sketchbook style"
+    negative: "color, painted, digital, photo, realistic"
+    guidance_scale: 7.0
+    steps: 25
+
+  fantasy:
+    positive: "fantasy art, magical, ethereal glow, mythical, enchanted, epic fantasy illustration, detailed"
+    negative: "realistic, modern, urban, mundane, minimalist"
+    guidance_scale: 8.5
+    steps: 40
+
+  pop_art:
+    positive: "pop art style, bold colors, halftone dots, Andy Warhol inspired, comic style, high contrast"
+    negative: "realistic, muted colors, subtle, minimalist, classical"
+    guidance_scale: 7.5
+    steps: 25
+
+quality_levels:
+  standard:
+    boosters: "good quality, detailed"
+    negative: "low quality, blurry"
+  high:
+    boosters: "high quality, highly detailed, sharp focus, professional"
+    negative: "low quality, blurry, artifacts, noise, distorted"
+  ultra:
+    boosters: "masterpiece, best quality, ultra detailed, 8k resolution, sharp focus, intricate details, professional, award winning"
+    negative: "worst quality, low quality, blurry, artifacts, noise, distorted, deformed, ugly, bad anatomy, watermark, text, logo, signature"

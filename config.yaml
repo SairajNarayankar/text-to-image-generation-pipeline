@@ -1,0 +1,81 @@
+# ============================================
+# MAIN CONFIGURATION FILE
+# ============================================
+
+project:
+  name: "Text-to-Image Generation Pipeline"
+  version: "1.0.0"
+  description: "Production-grade T2I pipeline using Stable Diffusion"
+
+model:
+  model_id: "runwayml/stable-diffusion-v1-5"
+  revision: "main"
+  torch_dtype: "float32"
+  device: "cpu"
+  cache_dir: "./model_cache"
+  safety_checker: false
+  requires_safety_checker: false
+
+generation:
+  default:
+    num_inference_steps: 30
+    guidance_scale: 7.5
+    width: 512
+    height: 512
+    num_images_per_prompt: 1
+
+  presets:
+    fast:
+      num_inference_steps: 15
+      guidance_scale: 7.0
+    balanced:
+      num_inference_steps: 30
+      guidance_scale: 7.5
+    high_quality:
+      num_inference_steps: 50
+      guidance_scale: 9.0
+    ultra_quality:
+      num_inference_steps: 75
+      guidance_scale: 11.0
+
+optimization:
+  enable_xformers: false          # Not available on CPU
+  enable_attention_slicing: true   # Helps reduce memory
+  enable_vae_slicing: true         # Helps reduce memory
+  enable_vae_tiling: false
+  enable_model_cpu_offload: false  # Already on CPU
+  enable_sequential_cpu_offload: false
+  torch_compile: false
+
+scheduler:
+  default: "dpm_solver_multistep"
+  available:
+    - "dpm_solver_multistep"
+    - "euler_ancestral"
+    - "euler"
+    - "pndm"
+    - "ddim"
+    - "lms"
+    - "heun"
+    - "unipc"
+
+output:
+  base_dir: "./output"
+  portfolio_dir: "./output/portfolio"
+  batch_dir: "./output/batch"
+  experiments_dir: "./output/experiments"
+  exports_dir: "./output/exports"
+  image_format: "png"
+  save_metadata: true
+
+logging:
+  level: "INFO"
+  log_dir: "./logs"
+  log_file: "pipeline.log"
+  enable_wandb: false
+
+api:
+  host: "0.0.0.0"
+  port: 8000
+  max_queue_size: 10
+  cors_origins: ["*"]

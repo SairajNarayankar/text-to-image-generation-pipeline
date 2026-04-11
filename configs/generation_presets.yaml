@@ -1,0 +1,105 @@
+# ============================================
+# GENERATION PRESETS
+# ============================================
+
+presets:
+  # Speed-focused
+  draft:
+    num_inference_steps: 10
+    guidance_scale: 6.0
+    width: 384
+    height: 384
+    scheduler: "dpm_solver_multistep"
+    description: "Quick draft for prompt testing"
+
+  fast:
+    num_inference_steps: 15
+    guidance_scale: 7.0
+    width: 512
+    height: 512
+    scheduler: "euler_ancestral"
+    description: "Fast generation, acceptable quality"
+
+  # Balanced
+  balanced:
+    num_inference_steps: 30
+    guidance_scale: 7.5
+    width: 512
+    height: 512
+    scheduler: "dpm_solver_multistep"
+    description: "Good balance of speed and quality"
+
+  # Quality-focused
+  high_quality:
+    num_inference_steps: 50
+    guidance_scale: 9.0
+    width: 768
+    height: 768
+    scheduler: "dpm_solver_multistep"
+    description: "High quality, slower generation"
+
+  ultra_quality:
+    num_inference_steps: 75
+    guidance_scale: 11.0
+    width: 768
+    height: 768
+    scheduler: "euler"
+    description: "Maximum quality, significantly slower"
+
+  # Aspect Ratios
+  portrait:
+    num_inference_steps: 30
+    guidance_scale: 7.5
+    width: 512
+    height: 768
+    scheduler: "dpm_solver_multistep"
+    description: "Portrait orientation"
+
+  landscape:
+    num_inference_steps: 30
+    guidance_scale: 7.5
+    width: 768
+    height: 512
+    scheduler: "dpm_solver_multistep"
+    description: "Landscape orientation"
+
+  square:
+    num_inference_steps: 30
+    guidance_scale: 7.5
+    width: 512
+    height: 512
+    scheduler: "dpm_solver_multistep"
+    description: "Square format"
+
+  widescreen:
+    num_inference_steps: 30
+    guidance_scale: 7.5
+    width: 896
+    height: 512
+    scheduler: "dpm_solver_multistep"
+    description: "Widescreen banner format"
+
+  # Use-case specific
+  social_media_post:
+    num_inference_steps: 30
+    guidance_scale: 7.5
+    width: 512
+    height: 512
+    scheduler: "dpm_solver_multistep"
+    description: "Optimized for social media posts"
+
+  web_banner:
+    num_inference_steps: 35
+    guidance_scale: 8.0
+    width: 896
+    height: 384
+    scheduler: "dpm_solver_multistep"
+    description: "Wide web banner format"
+
+  thumbnail:
+    num_inference_steps: 20
+    guidance_scale: 7.5
+    width: 384
+    height: 384
+    scheduler: "euler_ancestral"
+    description: "Quick thumbnail generation"
