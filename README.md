@@ -36,7 +36,7 @@
 
 **Style Comparison (Same Prompt, Different Styles)**
 <br>
-<img src="https://image.pollinations.ai/prompt/Split%20screen%20showing%20a%20cat%20in%20four%20different%20art%20styles:%20photorealistic,%20cyberpunk,%20anime,%20and%20oil%20painting?width=800&height=250&nologo=true" width="800" alt="Style Comparison"/>
+<img src="https://image.pollinations.ai/prompt/Split%20screen%20showing%20a%20cat%20in%20four%20different%20art%20styles:%20photorealistic,%20cyberpunk,%20anime,%20and%20oil%20painting?width=400&height=400&nologo=true" width="250" alt="Style Comparison"/>
 
 ---
 
