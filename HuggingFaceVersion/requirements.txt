@@ -1,0 +1,22 @@
+# Core ML
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Diffusers — must be ≥0.20 for native clip_skip support + vae tiling
+diffusers>=0.24.0
+transformers>=4.35.0
+accelerate>=0.24.0
+
+# Required for loading .safetensors model weights
+safetensors>=0.4.0
+
+# xformers — optional but highly recommended for GPU memory efficiency
+# Comment out if your Space doesn't have a compatible CUDA version
+xformers>=0.0.22
+
+# UI
+gradio>=4.0.0
+
+# Utilities
+Pillow>=10.0.0
+numpy>=1.24.0
